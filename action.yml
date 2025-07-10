@@ -1,0 +1,6 @@
+name: "Install Prebuilt LLVM"
+description: "Downloads and extracts prebuilt LLVM from GitHub Releases into ./llvm"
+author: "RickIsGone"
+runs:
+  using: "node16"
+  main: "index.js"
