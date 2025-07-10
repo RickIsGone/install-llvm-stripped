@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 
 const owner = 'RickIsGone';
 const repo = 'install-llvm-stripped';
-const tag = 'v1.0.0';
+const tag = 'v2';
 const assetName = 'llvm-stripped.7z';
 
 async function downloadFile(url, dest) {
