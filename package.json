@@ -1,9 +1,15 @@
 {
    "name": "install-llvm-stripped",
    "version": "1.0.0",
-   "main": "index.js",
+   "main": "dist/index.js",
+   "scripts": {
+      "build": "ncc build index.js -o dist"
+   },
    "dependencies": {
       "@actions/core": "^1.10.0",
       "node-fetch": "^2.6.9"
+   },
+   "devDependencies": {
+      "@vercel/ncc": "^0.38.3"
    }
 }
