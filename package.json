@@ -1,6 +1,6 @@
 {
    "name": "install-llvm-stripped",
-   "version": "1.0.0",
+   "version": "2",
    "main": "dist/index.js",
    "scripts": {
       "build": "ncc build index.js -o dist"
