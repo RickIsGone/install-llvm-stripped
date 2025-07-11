@@ -13,6 +13,6 @@ runs:
     - name: Download precompiled LLVM
       shell: bash
       run: |
-        curl -L -o llvm.7z https://github.com/RickIsGone/install-llvm-stripped/releases/download/v2/llvm-stripped.7z
+        curl -L -o llvm.7z https://github.com/RickIsGone/install-llvm-stripped/releases/download/v1/llvm-stripped.7z
         7z x llvm.7z -o"${{ inputs.output-dir }}"
         echo "LLVM extracted to '${{ inputs.output-dir }}'"
