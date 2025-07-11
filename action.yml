@@ -1,6 +1,18 @@
 name: "Install Prebuilt LLVM"
-description: "Downloads and extracts prebuilt LLVM from GitHub Releases into ./llvm"
+description: "Downloads and extracts prebuilt LLVM from GitHub Releases"
 author: "RickIsGone"
+
+inputs:
+  output-dir:
+    description: "The path to install LLVM into"
+    required: true
+
 runs:
-  using: "node16"
-  main: "index.js"
+  using: "composite"
+  steps:
+    - name: Download precompiled LLVM
+      shell: bash
+      run: |
+        curl -L -o llvm.7z https://github.com/RickIsGone/install-llvm-stripped/releases/download/v2/llvm-stripped.7z
+        7z x llvm.7z -o"${{ inputs.output-dir }}"
+        echo "LLVM extracted to '${{ inputs.output-dir }}'"
